@@ -1,0 +1,26 @@
+1. laravel new {PROJECT NAME}
+    - create a new laravel project with essential tasks
+
+2. If npm is not installed in Workflow-1, then write it manually-
+    - cd {PROJECT NAME}
+    - npm install && npm run build
+    -
+
+
+
+
+
+
+
+
+
+
+
+
+---GIT---
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/AsifSazid/filament-laravel-12-app.git
+git push -u origin main    
