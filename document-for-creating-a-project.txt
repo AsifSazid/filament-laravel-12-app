@@ -1,23 +1,77 @@
+--------------------------
+---LARAVEL INSTALLATION---
+--------------------------
+
 1. laravel new {PROJECT NAME}
     - create a new laravel project with essential tasks
 
 2. If npm is not installed in Workflow-1, then write it manually-
     - cd {PROJECT NAME}
     - npm install && npm run build
-    -
+
+------------------------------------------
+---FILAMENT PACKAGE PANELS INSTALLATION---
+------------------------------------------
+
+~~~INSTALLATION~~~
+
+1. composer require filament/filament:"^3.3" -W 
+    - jodi zip related kono issues ase tahole --ignore-platform-req=ext-zip use korte hbe
+
+2. php artisan filament:install --panels
+
+3. php artisan make:filament-user
+    - ekhane kheyal rakhte hbe je kono number user kora jabe na... 
+    - dorkar hole number er written format likhte hbe...
+    - alphabet diye shuru kore kono number deya jete pare...
+
+4. For Optimize: php artisan filament:optimize OR php artisan filament:optimize-clear
+
+~~~GETTING STARTED~~~
+
+1. Setting up the database and models
+This project needs three models and migrations: Owner, Patient, and Treatment. Use the following artisan commands to create these:
+
+    php artisan make:model Owner -m
+    php artisan make:model Patient -m
+    php artisan make:model Treatment -m
+
+2. Define Migrations and Models (You may see from https://filamentphp.com/docs/3.x/panels/getting-started)
+
+3. Introducing resources for Patient and Owner
+
+    php artisan make:filament-resource Patient
+    php artisan make:filament-resource Owner
+
+4. Introducing relation managers for One Patient but Multiple Treatments
+
+    php artisan make:filament-relation-manager PatientResource treatments description
+    - You can see this on Individual Patient Edit
+
+5. Casting the price to an integer
+
+    php artisan make:cast MoneyCast
+
+6. Introducing widgets
+
+    - Creating a stats widget
+
+        php artisan make:filament-widget PatientTypeOverview --stats-overview
+
+    - Creating a chart widget
+
+        php artisan make:filament-widget TreatmentsChart --chart
+        composer require flowframe/laravel-trend (- jodi zip related kono issues ase tahole --ignore-platform-req=ext-zip use korte hbe)
+
+    
 
 
 
 
-
-
-
-
-
-
-
-
+---------
 ---GIT---
+---------
+
 git init
 git add README.md
 git commit -m "first commit"
