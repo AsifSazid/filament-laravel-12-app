@@ -1,7 +1,7 @@
 {
     "name": "sazumme/publication",
     "type": "library",
-    "description": "This is a testing package",
+    "description": "Description",
     "keywords": [
         "Laravel"
     ],
