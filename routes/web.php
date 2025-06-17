@@ -1,11 +1,17 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PackageController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/package-gen', function () {
+    return view('package-gen');
+});
+Route::post('/package/generate', [PackageController::class, 'generate'])->name('package.generate');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

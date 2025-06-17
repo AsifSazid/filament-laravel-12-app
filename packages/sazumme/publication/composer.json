@@ -1,0 +1,32 @@
+{
+    "name": "sazumme/publication",
+    "type": "library",
+    "description": "This is a testing package",
+    "keywords": [
+        "Laravel"
+    ],
+    "authors": [
+        {
+            "name": "Asif M Sazid",
+            "email": "asifsazid@gmail.com",
+            "homepage": "www.sazumme.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sazumme\\Publication\\": "src/"
+        }
+    },
+    "autoload-dev": {},
+    "extra": {
+        "copyright": "www.sazumme.com",
+        "laravel": {
+            "providers": [
+                "Sazumme\\Publication\\PublicationServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "version": "1.0.0",
+    "license": "MIT"
+}
